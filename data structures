@@ -1,0 +1,15 @@
+#task1: assigning elements to lists
+mylist=[1,2,3,4,5,6,7]
+print(mylist)
+
+#task2: accessing elements from a tuple
+mytuple= (1,2,3,"hi",4,"hello")
+print(mytuple[3])
+
+#task3: deleting dictionary elements
+mydict ={"name": "namyaa",
+      "surname":"kumar", 
+      "section":"c"}
+print (mydict)
+del (mydict["name"])
+print(mydict)
