@@ -1,0 +1,7 @@
+#program to print positive Numbers in a List 
+  
+list = [11, -22, 34, 45, 66, -90] 
+  
+for number in list: 
+    if number >= 0: 
+       print(number," ")
