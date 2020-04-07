@@ -1,0 +1,17 @@
+number= int(input("how many terms in fibonacci series?"))
+i,j=0,1
+count=0
+
+if number<=0:
+    print("enter positive value!")
+elif number==1:
+    print("the fibonacci series upto",number, "terms is:")
+    print(i)
+else: 
+    print("fibonacci series upto", number,"terms is:")
+    while count<number:
+        print(i)
+        n=i+j
+        i=j
+        j=n
+        count=count+1
