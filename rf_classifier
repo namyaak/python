@@ -1,0 +1,57 @@
+#importing dependencies 
+import numpy as np
+import pandas as pd
+from matplotlib import pyplot as plt
+from sklearn.ensemble import RandomForestClassifier 
+from sklearn.model_selection import train_test_split
+%matplotlib inline
+
+#using pandas to read the database
+data =pd.read_csv('mnist_test.csv')
+
+#viewing columns
+data.head()
+
+#reshaping
+a=a.reshape(28,28).astype('uint8')
+plt.imshow(a)
+
+#preparing the data
+#separating data and data values
+df_x =data.iloc[:,1:]
+df_y= data.iloc[:, 0]
+
+#creating test and train sizes/batches
+x_train,x_test, y_train, y_test= train_test_split(df_x, df_y, test_size=0.2, random_state=4)
+
+#check data
+y_train.head
+
+#rf classifier
+rf = RandomForestClassifier(n_estimators=100)
+
+#fit the model
+rf.fit(x_train, y_train)
+
+#predicting test data 
+pred= rf.predict(x_test)
+
+pred
+
+#checking prediction accuracy
+s= y_test.values
+
+#calculate number of correctly predicted values
+count=0
+for i in range (len(pred)):
+      if pred[i]==s[i]:
+           count=count+1
+           
+count
+
+#number of values o which the test was done
+len(pred)
+
+#accuracy
+1895/2000
+
